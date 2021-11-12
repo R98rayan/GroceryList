@@ -10,10 +10,14 @@
 		71AC7B40BFE2474EF6497C25 /* Pods_GroceryList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578DA153932218FBB0C6FC83 /* Pods_GroceryList.framework */; };
 		C34A87EA273BBC9B00D6E059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A87E9273BBC9B00D6E059 /* AppDelegate.swift */; };
 		C34A87EC273BBC9B00D6E059 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A87EB273BBC9B00D6E059 /* SceneDelegate.swift */; };
-		C34A87EE273BBC9B00D6E059 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A87ED273BBC9B00D6E059 /* ViewController.swift */; };
+		C34A87EE273BBC9B00D6E059 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A87ED273BBC9B00D6E059 /* LoginViewController.swift */; };
 		C34A87F1273BBC9B00D6E059 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34A87EF273BBC9B00D6E059 /* Main.storyboard */; };
 		C34A87F3273BBC9D00D6E059 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C34A87F2273BBC9D00D6E059 /* Assets.xcassets */; };
 		C34A87F6273BBC9D00D6E059 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34A87F4273BBC9D00D6E059 /* LaunchScreen.storyboard */; };
+		C34A8801273BD55200D6E059 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C34A8800273BD55200D6E059 /* GoogleService-Info.plist */; };
+		C34A8803273C74E300D6E059 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A8802273C74E300D6E059 /* RegisterViewController.swift */; };
+		C34A8805273C750100D6E059 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A8804273C750100D6E059 /* Helper.swift */; };
+		C34A8807273D1C4500D6E059 /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A8806273D1C4500D6E059 /* GroceryListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +27,15 @@
 		C34A87E6273BBC9B00D6E059 /* GroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34A87E9273BBC9B00D6E059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C34A87EB273BBC9B00D6E059 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C34A87ED273BBC9B00D6E059 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C34A87ED273BBC9B00D6E059 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C34A87F0273BBC9B00D6E059 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C34A87F2273BBC9D00D6E059 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C34A87F5273BBC9D00D6E059 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C34A87F7273BBC9D00D6E059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C34A8800273BD55200D6E059 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C34A8802273C74E300D6E059 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C34A8804273C750100D6E059 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		C34A8806273D1C4500D6E059 /* GroceryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,15 +79,43 @@
 		C34A87E8273BBC9B00D6E059 /* GroceryList */ = {
 			isa = PBXGroup;
 			children = (
-				C34A87E9273BBC9B00D6E059 /* AppDelegate.swift */,
-				C34A87EB273BBC9B00D6E059 /* SceneDelegate.swift */,
-				C34A87ED273BBC9B00D6E059 /* ViewController.swift */,
+				C34A87FF273BD51D00D6E059 /* Controllers */,
+				C34A87FE273BD4E600D6E059 /* Resources */,
+				C34A87FD273BD4A100D6E059 /* Views */,
+				C34A87F7273BBC9D00D6E059 /* Info.plist */,
+				C34A8800273BD55200D6E059 /* GoogleService-Info.plist */,
+			);
+			path = GroceryList;
+			sourceTree = "<group>";
+		};
+		C34A87FD273BD4A100D6E059 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				C34A87EF273BBC9B00D6E059 /* Main.storyboard */,
 				C34A87F2273BBC9D00D6E059 /* Assets.xcassets */,
 				C34A87F4273BBC9D00D6E059 /* LaunchScreen.storyboard */,
-				C34A87F7273BBC9D00D6E059 /* Info.plist */,
 			);
-			path = GroceryList;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C34A87FE273BD4E600D6E059 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C34A87E9273BBC9B00D6E059 /* AppDelegate.swift */,
+				C34A87EB273BBC9B00D6E059 /* SceneDelegate.swift */,
+				C34A8804273C750100D6E059 /* Helper.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C34A87FF273BD51D00D6E059 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C34A87ED273BBC9B00D6E059 /* LoginViewController.swift */,
+				C34A8802273C74E300D6E059 /* RegisterViewController.swift */,
+				C34A8806273D1C4500D6E059 /* GroceryListViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		EE1BF203762BF0BA479F3925 /* Pods */ = {
@@ -88,7 +124,6 @@
 				1778AACC6C7AD0D41975DC7A /* Pods-GroceryList.debug.xcconfig */,
 				0BB90774D1C8387FC9098806 /* Pods-GroceryList.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34A87F6273BBC9D00D6E059 /* LaunchScreen.storyboard in Resources */,
+				C34A8801273BD55200D6E059 /* GoogleService-Info.plist in Resources */,
 				C34A87F3273BBC9D00D6E059 /* Assets.xcassets in Resources */,
 				C34A87F1273BBC9B00D6E059 /* Main.storyboard in Resources */,
 			);
@@ -207,9 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C34A87EE273BBC9B00D6E059 /* ViewController.swift in Sources */,
+				C34A87EE273BBC9B00D6E059 /* LoginViewController.swift in Sources */,
 				C34A87EA273BBC9B00D6E059 /* AppDelegate.swift in Sources */,
+				C34A8807273D1C4500D6E059 /* GroceryListViewController.swift in Sources */,
+				C34A8805273C750100D6E059 /* Helper.swift in Sources */,
 				C34A87EC273BBC9B00D6E059 /* SceneDelegate.swift in Sources */,
+				C34A8803273C74E300D6E059 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
