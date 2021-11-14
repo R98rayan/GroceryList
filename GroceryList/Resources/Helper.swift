@@ -8,10 +8,24 @@
 import Foundation
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class Helper {
+    
     static let fontStyle = "Avenir Black Oblique"
     static let database = Database.database().reference()
+    static let userDefaults = UserDefaults.standard
+    
+    static func setOnlineID(onlineID: String) {
+        userDefaults.set(onlineID, forKey: "onlineID")
+    }
+    
+    static func getOnlineID() -> String {
+        if let result = userDefaults.string(forKey: "onlineID") {
+            return result
+        }
+        return "no onlineID"
+    }
     
     static func alertUserError(title: String, message: String, view: UIViewController) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -24,4 +38,9 @@ class Helper {
         safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
         return safeEmail
     }
+    
+    static func currentUser() -> User {
+        return FirebaseAuth.Auth.auth().currentUser!
+    }
+    
 }

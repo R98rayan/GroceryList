@@ -33,11 +33,34 @@ class LoginViewController: UIViewController {
                 return
             }
             let user = result.user
-            print("🔴 logged in user: \(user)")
+            
+            let key = Helper.database.child("online").childByAutoId().key
+            Helper.setOnlineID(onlineID: key!)
+            Helper.database.child("online").child(key!).setValue(user.email)
+            print("✅ [Login] upload to Realtime Database Online List")
+            
+            print("✅ Successfully logged in user: \(user)")
             self.dismiss(animated: true, completion: nil)
         })
     }
     
-
+    @IBAction func fastLoginAction(_ sender: Any) {
+        FirebaseAuth.Auth.auth().signIn(withEmail: "r98rayan@gmail.com", password: "123456", completion: { authResult , error  in
+            guard let result = authResult, error == nil else {
+                Helper.alertUserError(title: "🔴 Error!", message: error!.localizedDescription, view: self)
+                return
+            }
+            let user = result.user
+            
+            let key = Helper.database.child("online").childByAutoId().key
+            Helper.setOnlineID(onlineID: key!)
+            Helper.database.child("online").child(key!).setValue(user.email)
+            print("✅ [Login] upload to Realtime Database Online List")
+            
+            print("✅ [Login] Successfully logged in user: \(user)")
+            self.dismiss(animated: true, completion: nil)
+        })
+    }
+    
 }
 

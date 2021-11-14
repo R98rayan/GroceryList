@@ -18,6 +18,7 @@
 		C34A8803273C74E300D6E059 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A8802273C74E300D6E059 /* RegisterViewController.swift */; };
 		C34A8805273C750100D6E059 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A8804273C750100D6E059 /* Helper.swift */; };
 		C34A8807273D1C4500D6E059 /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A8806273D1C4500D6E059 /* GroceryListViewController.swift */; };
+		C3556816274086E1006D34D8 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3556815274086E1006D34D8 /* UserListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C34A8802273C74E300D6E059 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C34A8804273C750100D6E059 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		C34A8806273D1C4500D6E059 /* GroceryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListViewController.swift; sourceTree = "<group>"; };
+		C3556815274086E1006D34D8 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				C34A87ED273BBC9B00D6E059 /* LoginViewController.swift */,
 				C34A8802273C74E300D6E059 /* RegisterViewController.swift */,
 				C34A8806273D1C4500D6E059 /* GroceryListViewController.swift */,
+				C3556815274086E1006D34D8 /* UserListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3556816274086E1006D34D8 /* UserListViewController.swift in Sources */,
 				C34A87EE273BBC9B00D6E059 /* LoginViewController.swift in Sources */,
 				C34A87EA273BBC9B00D6E059 /* AppDelegate.swift in Sources */,
 				C34A8807273D1C4500D6E059 /* GroceryListViewController.swift in Sources */,

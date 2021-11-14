@@ -26,14 +26,21 @@ class RegisterViewController: UIViewController {
         
         FirebaseAuth.Auth.auth().createUser(withEmail: emailLabel.text!, password: passwordLabel.text!, completion: { authResult , error  in
             guard let result = authResult, error == nil else {
-                Helper.alertUserError(title: "🔴 Error!", message: "wrong email or password!", view: self)
+                Helper.alertUserError(title: "🔴 Error!", message: error!.localizedDescription, view: self)
                 return
             }
             let user = result.user
             print("🔴 Created User: \(user)")
 
-            Helper.database.child( Helper.getSafeEmail(email: self.emailLabel.text!) ).setValue(["first_name": self.firstNameLabel.text,"last_name": self.lastNameLabel.text])
-            print("🔴 upload data to realtime database, child = '\(Helper.getSafeEmail(email: self.emailLabel.text!))'")
+//            Helper.database.child( Helper.getSafeEmail(email: self.emailLabel.text!) ).setValue(["first_name": self.firstNameLabel.text,"last_name": self.lastNameLabel.text])
+            
+            Helper.database.child("users").child(user.uid).setValue(["email": self.emailLabel.text, "first_name": self.firstNameLabel.text,"last_name": self.lastNameLabel.text])
+            
+            let key = Helper.database.child("online").childByAutoId().key
+            Helper.setOnlineID(onlineID: key!)
+            Helper.database.child("online").child(key!).setValue(user.email)
+            
+            print("🔴 upload data to realtime database, child = '\(user.uid)'")
             self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         })
         
